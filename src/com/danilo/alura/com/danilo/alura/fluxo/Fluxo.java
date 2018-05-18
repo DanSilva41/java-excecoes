@@ -3,7 +3,11 @@ package com.danilo.alura.com.danilo.alura.fluxo;
 public class Fluxo {
     public static void main(String[] args) {
         System.out.println("MAIN BEGIN");
-        m1();
+        try {
+            m1();
+        } catch (ArithmeticException ex) {
+            System.out.println("ArithmeticException");
+        }
         System.out.println("MAIN END");
     }
 
@@ -17,11 +21,7 @@ public class Fluxo {
         System.out.println("A BEGIN");
         for (int i = 1; i <= 5; i++) {
             System.out.println(i);
-            try {
-                int a = i / 0;
-            } catch (ArithmeticException ex) {
-                System.out.println("ArithmeticException");
-            }
+            int a = i / 0;
         }
         System.out.println("A END");
     }
