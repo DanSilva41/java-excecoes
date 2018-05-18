@@ -15,6 +15,14 @@ public class Fluxo {
 
     public static void m2() {
         System.out.println("A BEGIN");
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(i);
+            try {
+                int a = i / 0;
+            } catch (ArithmeticException ex) {
+                System.out.println("ArithmeticException");
+            }
+        }
         System.out.println("A END");
     }
 }
