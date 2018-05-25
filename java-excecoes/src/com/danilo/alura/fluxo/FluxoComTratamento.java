@@ -16,16 +16,15 @@ public class FluxoComTratamento {
 		System.out.println("MAIN END");
 	}
 
-	public static void m1() {
+	public static void m1() throws MinhaExcecao {
 		System.out.println("B BEGIN");
 		m2();
 		System.out.println("B END");
 	}
 
-	public static void m2() {
+	public static void m2() throws MinhaExcecao {
 		System.out.println("A BEGIN");
-		m2();
-		//throw new MinhaExcecao("Deu erro grande");
-		System.out.println("A END");
+		throw new MinhaExcecao("Deu erro grande");
+		// System.out.println("A END");
 	}
 }
