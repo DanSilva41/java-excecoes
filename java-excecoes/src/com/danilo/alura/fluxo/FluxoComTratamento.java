@@ -24,8 +24,8 @@ public class FluxoComTratamento {
 
 	public static void m2() {
 		System.out.println("A BEGIN");
-
-		throw new MinhaExcecao("Deu erro grande");
-		// System.out.println("A END");
+		m2();
+		//throw new MinhaExcecao("Deu erro grande");
+		System.out.println("A END");
 	}
 }
